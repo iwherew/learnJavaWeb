@@ -11,9 +11,8 @@
 <script>
   function post(){
     axios({
-      method: 'post',
-      url: "https://cloud.tencent.com/developer/api/ask/get-article-related-asks",
-      data: {articleId: 1098141}
+      method: 'get',
+      url: "https://mock.apifox.cn/m1/3128855-0-default/emp/list",
     }).then(res => {
       console.log(res)
     })
