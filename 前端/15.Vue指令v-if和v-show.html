@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16"></script>
+</head>
+<body>
+<div id="app">
+  年龄<input type="text" v-model="age">
+  <span v-if="age <= 35">年轻人</span>
+  <span v-else-if="age <= 65">中年人</span>
+  <span v-else>老年人</span>
+
+  <span v-show="age >= 65">退休了</span>
+</div>
+</body>
+
+<script>
+  new Vue({
+    el: "#app",
+    data:{
+      age: 20,
+    }
+  })
+</script>
+</html>
