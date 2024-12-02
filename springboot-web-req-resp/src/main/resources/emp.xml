@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<emps>
+    <emp>
+        <name>谢逊</name>
+        <age>18</age>
+        <image>https://web-framework.oss-cn-hangzhou.aliyuncs.com/web/1.jpg</image>
+<!--   1:男  2：女     -->
+        <gender>1</gender>
+<!--   1：讲师  2：班主任  3：就业指导     -->
+        <job>1</job>
+    </emp>
+    <emp>
+        <name>韦一笑</name>
+        <age>35</age>
+        <image>https://web-framework.oss-cn-hangzhou.aliyuncs.com/web/2.jpg</image>
+        <gender>1</gender>
+        <job>2</job>
+    </emp>
+    <emp>
+        <name>黛绮丝</name>
+        <age>80</age>
+        <image>https://web-framework.oss-cn-hangzhou.aliyuncs.com/web/3.jpg</image>
+        <gender>2</gender>
+        <job>3</job>
+    </emp>
+    <emp>
+        <name>殷天正</name>
+        <age>65</age>
+        <image>https://web-framework.oss-cn-hangzhou.aliyuncs.com/web/4.jpg</image>
+        <gender>1</gender>
+        <job>3</job>
+    </emp>
+</emps>
