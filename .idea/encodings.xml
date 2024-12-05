@@ -3,6 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/mysql_project/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mysql_project/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-mybatis-crud/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-mybatis-crud/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-mybatis-quickstart/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-mybatis-quickstart/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-web-quickstart/src/main/java" charset="UTF-8" />
@@ -11,5 +13,9 @@
     <file url="file://$PROJECT_DIR$/springboot-web-quickstart2/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-web-req-resp/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-web-req-resp/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tlias-web-management/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tlias-web-management/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tlias-web-mgt/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tlias-web-mgt/src/main/resources" charset="UTF-8" />
   </component>
 </project>
