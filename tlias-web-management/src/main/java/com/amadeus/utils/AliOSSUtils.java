@@ -6,6 +6,10 @@ import com.aliyun.oss.common.auth.EnvironmentVariableCredentialsProvider;
 import com.aliyun.oss.common.comm.SignVersion;
 import com.aliyun.oss.model.PutObjectRequest;
 import com.aliyun.oss.model.PutObjectResult;
+import lombok.Data;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 import java.io.*;
@@ -16,10 +20,25 @@ import java.util.UUID;
  */
 @Component
 public class AliOSSUtils {
+    @Autowired
+    private AliOSSProperties aliOSSProperties;
+
+////    @Value("${aliyun.oss.endpoint}")
+//    private String endpoint;
+////    @Value("${aliyun.oss.region}")
+//    private String region;
+////    @Value("${aliyun.oss.bucketName}")
+//    private String bucketName;
+
     /**
      * 实现上传图片到OSS
      */
     public String upload(MultipartFile file) throws IOException, com.aliyuncs.exceptions.ClientException {
+        // 获取阿里云OSS参数
+        String endpoint = aliOSSProperties.getEndpoint();
+        String region = aliOSSProperties.getRegion();
+        String bucketName = aliOSSProperties.getBucketName();
+
         // 获取上传的文件的输入流
         InputStream inputStream = file.getInputStream();
 
@@ -28,15 +47,9 @@ public class AliOSSUtils {
         String fileName = UUID.randomUUID().toString() + originalFilename.substring(originalFilename.lastIndexOf("."));
 
         //上传文件到 OSS
-        // Endpoint以华东1（杭州）为例，其它Region请按实际情况填写。
-        String endpoint = "https://oss-cn-beijing.aliyuncs.com";
+
         // 从环境变量中获取访问凭证。运行本代码示例之前，请确保已设置环境变量OSS_ACCESS_KEY_ID和OSS_ACCESS_KEY_SECRET。
         EnvironmentVariableCredentialsProvider credentialsProvider = CredentialsProviderFactory.newEnvironmentVariableCredentialsProvider();
-        // 填写Bucket名称，例如examplebucket。
-        String bucketName = "web-amadeus";
-        // 填写Bucket所在地域。以华东1（杭州）为例，Region填写为cn-hangzhou。
-        String region = "cn-beijing";
-
         // 创建OSSClient实例。
         ClientBuilderConfiguration clientBuilderConfiguration = new ClientBuilderConfiguration();
         clientBuilderConfiguration.setSignatureVersion(SignVersion.V4);
