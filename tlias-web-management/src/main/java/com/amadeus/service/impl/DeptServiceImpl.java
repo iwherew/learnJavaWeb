@@ -1,5 +1,6 @@
 package com.amadeus.service.impl;
 
+import com.amadeus.anno.MyLog;
 import com.amadeus.mapper.DeptMapper;
 import com.amadeus.mapper.EmpMapper;
 import com.amadeus.pojo.Dept;
@@ -23,6 +24,7 @@ public class DeptServiceImpl implements DeptService {
     @Autowired
     private DeptLogService deptLogService;
 
+    @MyLog
     @Override
     public List<Dept> list() {
         return deptMapper.list();
@@ -56,6 +58,7 @@ public class DeptServiceImpl implements DeptService {
         deptMapper.insert(dept);
     }
 
+    @MyLog
     @Override
     public Dept queryById(Integer id) {
 
