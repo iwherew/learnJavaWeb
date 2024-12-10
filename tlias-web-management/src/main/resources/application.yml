@@ -24,3 +24,7 @@ aliyun:
     endpoint: https://oss-cn-beijing.aliyuncs.com
     region: cn-beijing
     bucketName: web-amadeus
+
+logging:
+  level:
+    org.springframework.jdbc.support.JdbcTransactionManager: debug
